@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: black;
+  height: 600px;
+  width: 360px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.screen {
+  height: 165px;
+  width: 340px;
+  margin: auto;
+  font-size: 50px;
+  padding: 20px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: 72px 72px 72px 72px;
+  grid-template-rows: 72px 72px 72px 72px 72px;
+  color: #fff;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.grid button {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.grid button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.number1 button,
+.number2 button,
+.number3 button {
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+.number4 button,
+.number8 button,
+.number12 button,
+.number16 button {
+  background-color: #f1a33c;
+}
+
+.numbers .grid button {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  font-size: 35px;
+}
+
+.container .numbers .number17 {
+  grid-row: 5/6;
+  grid-column: 1/3;
+}
+
+.container .numbers .number17 button {
+  width: 154px;
+  border-radius: 36px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+@media (max-width: 425px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .screen {
+    height: 190px;
+  }
+  .numbers {
+    margin-bottom: 10px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .screen {
+    height: 140px;
+  }
+  body {
+    background-color: #000;
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    color: var(--tuscolor);
+    gap: 15px 10;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .numbers .grid button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 35px;
+  }
+  .container .numbers .number17 button {
+    width: 100%;
+    border-radius: 36px;
+    text-align: left;
+    padding-left: 18px;
+  }
+}
